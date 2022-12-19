@@ -1,0 +1,104 @@
+[
+  { "value": "2", "label": "Construction materials" },
+  { "value": "3", "label": "Electronics and Optics" },
+  { "value": "4", "label": "Food and Beverage" },
+  { "value": "1", "label": "Manufacturing" },
+  {
+    "value": "5",
+    "label": "Bakery and confectionery products"
+  },
+  { "value": "6", "label": "Beverages" },
+  { "value": "7", "label": "Fish and fish products " },
+  { "value": "8", "label": "Meat meat products" },
+  { "value": "9", "label": "Milk and dairy products " },
+  { "value": "10", "label": "Other" },
+  { "value": "11", "label": "Sweets and snack food" },
+  { "value": "12", "label": "Furniture" },
+  { "value": "13", "label": "Bathroom/sauna" },
+  { "value": "14", "label": "Bedroom" },
+  { "value": "15", "label": "Children’s room" },
+  { "value": "16", "label": "Kitchen" },
+  { "value": "17", "label": "Living room" },
+  { "value": "18", "label": "Office" },
+  { "value": "19", "label": "Other (Furniture)" },
+  { "value": "20", "label": "Outdoor" },
+  { "value": "21", "label": "Project furniture" },
+  { "value": "22", "label": "Machinery components" },
+  { "value": "23", "label": "Machinery equipment/tools" },
+  { "value": "24", "label": "Manufacture of machinery" },
+  { "value": "25", "label": "Maritime" },
+  {
+    "value": "26",
+    "label": "27"
+  },
+  { "value": "28", "label": "Boat/Yacht building" },
+  { "value": "29", "label": "Ship repair and conversion" },
+  { "value": "30", "label": "Metal structures" },
+  {
+    "value": "31",
+    "label": "Repair and maintenance service"
+  },
+  {
+    "value": "32",
+    "label": "MetalworkingConstruction of metal structures"
+  },
+  {
+    "value": "33",
+    "label": "Construction of metal structures"
+  },
+  { "value": "34", "label": "Houses and buildings" },
+  { "value": "35", "label": "Metal products" },
+  { "value": "36", "label": "Metal works" },
+  { "value": "37", "label": "CNC-machining" },
+  { "value": "38", "label": "Forgings, Fasteners" },
+  { "value": "39", "label": "Gas, Plasma, Laser cutting" },
+  { "value": "40", "label": "MIG, TIG, Aluminum welding" },
+  { "value": "41", "label": "Plastic and Rubber" },
+  { "value": "42", "label": "Packaging" },
+  { "value": "43", "label": "Plastic goods" },
+  {
+    "value": "44",
+    "label": "Plastic processing technology"
+  },
+  { "value": "45", "label": "Blowing" },
+  { "value": "Moulding", "label": "Moulding" },
+  {
+    "value": "46",
+    "label": "Plastics welding and processing"
+  },
+  { "value": "47", "label": "Plastic profiles" },
+  { "value": "48", "label": "Printing" },
+  { "value": "49", "label": "Book/Periodicals printing" },
+  {
+    "value": "50",
+    "label": "labelling and packaging printing"
+  },
+  { "value": "51", "label": "Textile and Clothing" },
+  { "value": "52", "label": "Clothing" },
+  { "value": "53", "label": "Wood" },
+  { "value": "54", "label": "Other (Wood)" },
+  { "value": "55", "label": "Wooden building materials" },
+  { "value": "56", "label": "Wooden houses" },
+  { "value": "57", "label": "Creative industries" },
+  { "value": "58", "label": "Energy technology" },
+  { "value": "59", "label": "Environment" },
+  { "value": "60", "label": "Service" },
+  { "value": "61", "label": "Business services" },
+  { "value": "62", "label": "Engineering" },
+  {
+    "value": "63",
+    "label": "Information Technology and Telecommunications"
+  },
+  {
+    "value": "64",
+    "label": "Data processing, Web portals, E-marketing"
+  },
+  { "value": "65", "label": "Programming, Consultancy" },
+  { "value": "66", "label": "Software, Hardware" },
+  { "value": "67", "label": "Air" },
+  { "value": "68", "label": "Rail" },
+  { "value": "69", "label": "Road" },
+  { "value": "70", "label": "Water" },
+  { "value": "71", "label": "Transport and Logistics" },
+  { "value": "72", "label": "Telecommunications" }
+]
