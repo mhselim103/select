@@ -6,7 +6,7 @@ const Home = () => {
   const [options, setOptions] = useState([]);
   const navigate = useNavigate();
   useEffect(() => {
-    fetch("http://localhost:5000/options")
+    fetch("https://task-beta-lovat.vercel.app/options")
       .then((res) => res.json())
       .then((data) => setOptions(data));
   }, []);
@@ -21,7 +21,7 @@ const Home = () => {
     defaultValues: {},
   });
   const onSubmit = (user) => {
-    fetch("http://localhost:5000/users", {
+    fetch("https://task-beta-lovat.vercel.app/users", {
       method: "POST",
       headers: {
         "content-type": "application/json",
