@@ -22,7 +22,7 @@ const Edit = () => {
     defaultValues: {},
   });
   const onSubmit = (user) => {
-    fetch(``, {
+    fetch(`https://task-production-4088.up.railway.app/users/${name}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",
