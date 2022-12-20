@@ -31,7 +31,9 @@ const Edit = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        if (data) {
+          navigate(`/${user.name}`);
+        }
       });
     reset();
   };
