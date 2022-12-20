@@ -5,7 +5,7 @@ const Welcome = () => {
   const { name } = useParams();
   const [user, setUser] = useState();
   useEffect(() => {
-    fetch(`https://task-beta-lovat.vercel.app/users/${name}`)
+    fetch(`https://task-production-4088.up.railway.app/users/${name}`)
       .then((res) => res.json())
       .then((data) => setUser(data));
   }, []);
