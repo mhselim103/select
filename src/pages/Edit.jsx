@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Controller, useForm } from "react-hook-form";
 import { useNavigate, useParams } from "react-router-dom";
 import AsyncSelect from "react-select/async";
@@ -31,13 +31,13 @@ const Edit = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        if (data) {
-          navigate(`/${user.name}`);
+        if (data.modifiedCount > 0) {
+          navigate(`/${nameRef}`);
         }
       });
     reset();
   };
-
+  let nameRef = useRef();
   return (
     <div className="  min-h-screen py-8 px-5 lg:px-32">
       <div>
@@ -52,6 +52,7 @@ const Edit = () => {
             </h1>
             <input
               required
+              ref={nameRef}
               {...register("name")}
               className="w-full border-2 py-2 px-3"
               type="text"
