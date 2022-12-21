@@ -4,7 +4,7 @@ import AsyncSelect from "react-select/async";
 const Edit = ({ isDefault, setDefault, user, id }) => {
   const [options, setOptions] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/options")
+    fetch("https://task-production-4088.up.railway.app/options")
       .then((res) => res.json())
       .then((data) => setOptions(data));
   }, []);
@@ -19,7 +19,7 @@ const Edit = ({ isDefault, setDefault, user, id }) => {
     defaultValues: {},
   });
   const onSubmit = (user) => {
-    fetch(`http://localhost:5000/users/${id}`, {
+    fetch(`https://task-production-4088.up.railway.app/users/${id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

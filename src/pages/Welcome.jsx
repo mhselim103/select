@@ -8,7 +8,7 @@ const Welcome = () => {
   const [user, setUser] = useState();
   const [isDefault, setDefault] = useState(true);
   useEffect(() => {
-    fetch(`http://localhost:5000/users/${id}`)
+    fetch(`https://task-production-4088.up.railway.app/users/${id}`)
       .then((res) => res.json())
       .then((data) => setUser(data));
   }, [user]);
