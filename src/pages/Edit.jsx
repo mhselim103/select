@@ -1,13 +1,10 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Controller, useForm } from "react-hook-form";
-import { useNavigate, useParams } from "react-router-dom";
 import AsyncSelect from "react-select/async";
-const Edit = () => {
-  const { name } = useParams();
+const Edit = ({ isDefault, setDefault, user, id }) => {
   const [options, setOptions] = useState([]);
-  const navigate = useNavigate();
   useEffect(() => {
-    fetch("https://task-production-4088.up.railway.app/options")
+    fetch("http://localhost:5000/options")
       .then((res) => res.json())
       .then((data) => setOptions(data));
   }, []);
@@ -22,7 +19,7 @@ const Edit = () => {
     defaultValues: {},
   });
   const onSubmit = (user) => {
-    fetch(`https://task-production-4088.up.railway.app/users/${name}`, {
+    fetch(`http://localhost:5000/users/${id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",
@@ -31,13 +28,12 @@ const Edit = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        if (data.modifiedCount > 0) {
-          navigate(`/${nameRef}`);
+        if (data.acknowledged) {
+          setDefault(!isDefault);
         }
       });
     reset();
   };
-  let nameRef = useRef();
   return (
     <div className="  min-h-screen py-8 px-5 lg:px-32">
       <div>
@@ -47,18 +43,16 @@ const Edit = () => {
         >
           <div className="space-y-5">
             <h1 className="font-medium text-xl text-center">
-              Please enter your name and pick the Sectors you are currently
-              involved in.
+              Edit your name and Sectors you are currently involved in.
             </h1>
             <input
               required
-              ref={nameRef}
               {...register("name")}
               className="w-full border-2 py-2 px-3"
               type="text"
               name="name"
               id="name"
-              defaultValue={name}
+              defaultValue={user.name}
             />
           </div>
           {options && (
@@ -68,7 +62,11 @@ const Edit = () => {
                 control={control}
                 name="sectors"
                 render={({ field: { onChange } }) => (
-                  <AsyncSelect defaultOptions={options} onChange={onChange} />
+                  <AsyncSelect
+                    defaultOptions={options}
+                    // defaultValue={{ label: user.sectors.label }}
+                    onChange={onChange}
+                  />
                 )}
               />
             </div>

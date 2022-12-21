@@ -1,7 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const LoadData = ({ user, setDefault, isDefault }) => {
-  console.log(user);
   return (
     <div>
       <form className="space-y-5 w-full lg:w-2/3 mx-auto px-5">
@@ -28,9 +28,15 @@ const LoadData = ({ user, setDefault, isDefault }) => {
           )}
         </div>
       </form>
-      <div className="flex justify-center pt-4">
+      <div className="flex justify-center pt-4 gap-5">
+        <Link
+          className="max-w-[200px]  bg-green-500 rounded py-2 px-3"
+          to={"/"}
+        >
+          Go To Home
+        </Link>
         <button
-          className="w-[200px]  bg-green-500 rounded py-2 px-3"
+          className="max-w-[200px]  bg-red-500 rounded py-2 px-3"
           onClick={() => setDefault(!isDefault)}
         >
           Edit Data

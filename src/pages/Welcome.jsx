@@ -4,14 +4,14 @@ import Edit from "./Edit";
 import LoadData from "./loadData";
 
 const Welcome = () => {
-  const { name } = useParams();
+  const { id } = useParams();
   const [user, setUser] = useState();
   const [isDefault, setDefault] = useState(true);
   useEffect(() => {
-    fetch(`https://task-production-4088.up.railway.app/users/${name}`)
+    fetch(`http://localhost:5000/users/${id}`)
       .then((res) => res.json())
       .then((data) => setUser(data));
-  }, []);
+  }, [user]);
   // console.log(user);
 
   return (
@@ -20,7 +20,14 @@ const Welcome = () => {
         {isDefault && (
           <LoadData user={user} isDefault={isDefault} setDefault={setDefault} />
         )}
-        {!isDefault && <Edit />}
+        {!isDefault && (
+          <Edit
+            isDefault={isDefault}
+            setDefault={setDefault}
+            user={user}
+            id={user._id}
+          />
+        )}
       </div>
     </div>
   );

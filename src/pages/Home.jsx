@@ -6,7 +6,7 @@ const Home = () => {
   const [options, setOptions] = useState([]);
   const navigate = useNavigate();
   useEffect(() => {
-    fetch("https://task-production-4088.up.railway.app/options")
+    fetch("http://localhost:5000/options")
       .then((res) => res.json())
       .then((data) => setOptions(data));
   }, []);
@@ -21,7 +21,7 @@ const Home = () => {
     defaultValues: {},
   });
   const onSubmit = (user) => {
-    fetch("https://task-production-4088.up.railway.app/users", {
+    fetch("http://localhost:5000/users", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -31,7 +31,8 @@ const Home = () => {
       .then((res) => res.json())
       .then((data) => {
         if (data.acknowledged) {
-          navigate(`/${user.name}`);
+          // console.log(data);
+          navigate(`/${data.insertedId}`);
         }
       });
     reset();
